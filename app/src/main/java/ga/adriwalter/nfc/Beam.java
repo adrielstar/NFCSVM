@@ -3,7 +3,6 @@ package ga.adriwalter.nfc;
 /**
  * Created by Adriel on 1/31/2016.
  */
-import android.app.Activity;
 import android.content.Intent;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
@@ -16,6 +15,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Parcelable;
 import android.provider.Settings;
+import android.support.v7.app.AppCompatActivity;
 import android.text.format.Time;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,7 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class Beam extends Activity implements CreateNdefMessageCallback,
+public class Beam extends AppCompatActivity implements CreateNdefMessageCallback,
         OnNdefPushCompleteCallback {
     NfcAdapter mNfcAdapter;
     TextView mInfoText;
